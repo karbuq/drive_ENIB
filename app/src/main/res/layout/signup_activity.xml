@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:background="#1E88E5"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drive Enib"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="40dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:text="Créer un compte"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        ></TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            android:paddingLeft="60dp"
+            android:inputType="textEmailAddress"
+            android:background="@color/white"
+            />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/email"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"></ImageView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/passeworl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:paddingLeft="60dp"
+            android:background="@color/white"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/password"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"></ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/confpassworld"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Confirmation mot de passe"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:paddingLeft="60dp"
+            android:background="@color/white"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/password"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"></ImageView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Connexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer mon compte"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textAllCaps="false"></Button>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous avez déjà un compte?"
+            android:textColor="@color/white"
+            android:textSize="18dp"></TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/retourconnextion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connectez vous"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            ></TextView>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:visibility="gone">
+    </ProgressBar>
+</LinearLayout>

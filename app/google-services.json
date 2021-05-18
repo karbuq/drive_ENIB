@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674709030724",
+    "project_id": "driveenibv3",
+    "storage_bucket": "driveenibv3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674709030724:android:e001529dad158d2df3b911",
+        "android_client_info": {
+          "package_name": "com.example.driceenibt4_v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674709030724-dgpksh68lkbh5hhqt2hvmn6gfoec0ibv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOtDYbE_njLBul6USYlIUDt0ciB89Jpf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674709030724-dgpksh68lkbh5hhqt2hvmn6gfoec0ibv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:background="#1E88E5"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drive Enib"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="40dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:text="Compléter votre profil"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        ></TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Prenom"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/username2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Num de téléphone"
+            android:inputType="textPhonetic"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Accepter les conditions d'utilisation"
+        android:background="@color/purple_500">
+
+    </RadioButton>
+
+    <Button
+        android:id="@+id/ComfirmUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textAllCaps="false"></Button>
+
+
+
+
+
+
+</LinearLayout>
