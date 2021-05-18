@@ -10,9 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -22,6 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView connextionReturn;
     private ProgressBar mProgressBar;
     private FirebaseAuth firebaseAuth;
+    private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
         passworldEt2 = findViewById(R.id.confpassworld);
         creationCompte = findViewById(R.id.Connexion);
         connextionReturn = findViewById(R.id.retourconnextion);
-       // mProgressBar = new ProgressDialog(this);
+        mProgressDialog =new  ProgressDialog(this);
         //button
         creationCompte.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +73,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
         else if(TextUtils.isEmpty(passworld2)){
-            passworldEt2.setError("Enter confirme your passeworld");
+            passworldEt2.setError("Confimer votre mot de passe");
             return;
         }
         else if(!passworld1.equals(passworld2)){
@@ -82,6 +88,27 @@ public class SignUpActivity extends AppCompatActivity {
             emailEt.setError("Mail invalide");
             return;
         }
+        mProgressDialog.setMessage("patientez svp");
+        mProgressDialog.show();
+        mProgressDialog.setCanceledOnTouchOutside(false);
+        firebaseAuth.createUserWithEmailAndPassword(email,passworld1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull  Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(SignUpActivity.this,"Succés",Toast.LENGTH_LONG).show();
+                    Intent intent=new Intent(SignUpActivity.this,UserActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Toast.makeText(SignUpActivity.this,"Echec de la connexion",Toast.LENGTH_LONG).show();
+
+                }
+                mProgressDialog.dismiss();
+
+            }
+
+        });
 
     }
 

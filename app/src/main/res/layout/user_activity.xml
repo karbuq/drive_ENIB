@@ -30,12 +30,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="2dp">
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Prenom"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:paddingLeft="10dp"
             android:inputType="textPersonName"
@@ -47,12 +48,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
         <EditText
             android:id="@+id/username2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Nom"
+            android:textColor="@color/black"
             android:inputType="textPersonName"
             android:textColorHint="@color/black"
             android:paddingLeft="10dp"
@@ -62,13 +64,31 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
         <EditText
             android:id="@+id/phonenumber"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Num de téléphone"
             android:inputType="textPhonetic"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/userage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Age"
+            android:inputType="number"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:paddingLeft="10dp"
             android:background="@color/white"/>
