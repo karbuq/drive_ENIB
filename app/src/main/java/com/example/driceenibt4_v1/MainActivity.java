@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -64,6 +66,11 @@ public class MainActivity extends AppCompatActivity{
         forgetmdpTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//test dataBase
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("massage");
+
+                myRef.setValue("Hello, World!");
                 Toast.makeText(MainActivity.this,"va voir tes mail si on la coder...",Toast.LENGTH_SHORT).show();
             }
         });
