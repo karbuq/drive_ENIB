@@ -41,6 +41,8 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                rootNode=FirebaseDatabase.getInstance();
+
                 //recuperer les valeurs
                 String prenom=Prenom.getText().toString();
                 String nom=Nom.getText().toString();
@@ -52,9 +54,11 @@ public class UserActivity extends AppCompatActivity {
 
                 UserDataClass dataClass=new UserDataClass(prenom,nom,age,numerotel,email);
 
-                rootNode=FirebaseDatabase.getInstance();
                 reference=rootNode.getReference("Users");
                 reference.child(prenom).setValue(dataClass);
+
+
+
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("massage");

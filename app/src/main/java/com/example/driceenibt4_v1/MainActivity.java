@@ -67,10 +67,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 //test dataBase
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("massage");
 
-                myRef.setValue("Hello, World!");
                 Toast.makeText(MainActivity.this,"va voir tes mail si on la coder...",Toast.LENGTH_SHORT).show();
             }
         });
