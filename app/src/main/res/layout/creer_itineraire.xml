@@ -72,21 +72,7 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
 
-        <EditText
-            android:id="@+id/destination"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/white"
-            android:hint="Heure"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textColorHint="@color/black" />
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

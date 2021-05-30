@@ -21,6 +21,7 @@
 
 
     <Button
+        android:id="@+id/recherche"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="40dp"
@@ -30,6 +31,7 @@
         android:textSize="20dp" />
 
     <Button
+        android:id="@+id/creer"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="15dp"
@@ -38,6 +40,7 @@
         android:textSize="20dp" />
 
     <Button
+        android:id="@+id/profil"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="15dp"

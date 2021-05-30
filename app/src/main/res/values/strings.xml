@@ -3,4 +3,5 @@
     <string name="drive_enib">Drive Enib</string>
     <string name="rechercher_un_itineraire">Rechercher un itinéraire</string>
     <string name="creer_un_itineraire">Créer un itinéraire</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
