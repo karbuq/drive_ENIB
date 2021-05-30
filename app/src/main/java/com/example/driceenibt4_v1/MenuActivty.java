@@ -22,7 +22,7 @@ public class MenuActivty extends AppCompatActivity {
         profillBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivty.this, ProfilActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AccueilActivity.class);
                 startActivity(intent);
                 finish();
 

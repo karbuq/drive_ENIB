@@ -47,8 +47,12 @@ public class CreerActivity extends AppCompatActivity {
 
                 ItineraireDataClass dataClass=new ItineraireDataClass(depart,arrivee,date,place);
 
-                reference=rootNode.getReference("Itineraire");
-                reference.child(depart+arrivee+date+place).setValue(dataClass);
+                FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference mDbRef = mDatabase.getReference("Itineraire");
+                mDbRef.child(depart+arrivee+date+place).setValue(dataClass);
+
+                //reference=rootNode.getReference("Itineraire");
+                //reference.child(depart+arrivee+date+place).setValue(dataClass);
 
                 Intent intent=new Intent(getApplicationContext(),AccueilActivity.class);
                 startActivity(intent);

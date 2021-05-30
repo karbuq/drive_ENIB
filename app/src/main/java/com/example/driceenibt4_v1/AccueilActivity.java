@@ -1,6 +1,5 @@
 package com.example.driceenibt4_v1;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,18 +20,25 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class AccueilActivity extends AppCompatActivity {
 
-    private Button recherche;
-    private Button creer;
-    private Button profil;
+    private Button Recherche;
+    private Button Creer;
+    private Button Profil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acceuil);
 
-        recherche.setOnClickListener(new View.OnClickListener() {
+        Recherche = findViewById(R.id.recherche);
+        Creer=findViewById(R.id.creer);
+        Profil=findViewById(R.id.profil);
+
+        Recherche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent otherActivity = new Intent(getApplicationContext(), RechercheActivity.class);
@@ -42,7 +48,7 @@ public class AccueilActivity extends AppCompatActivity {
             }
         });
 
-        creer.setOnClickListener(new View.OnClickListener() {
+        Creer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent otherActivity = new Intent(getApplicationContext(), CreerActivity.class);
@@ -52,7 +58,7 @@ public class AccueilActivity extends AppCompatActivity {
             }
         });
 
-        profil.setOnClickListener(new View.OnClickListener() {
+        Profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent otherActivity = new Intent(getApplicationContext(), ProfilActivity.class);
