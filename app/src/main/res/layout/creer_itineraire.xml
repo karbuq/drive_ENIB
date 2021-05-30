@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp">
         <EditText
-            android:id="@+id/destination"
+            android:id="@+id/arrivee"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Destination"
@@ -60,6 +60,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
@@ -79,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp">
         <EditText
-            android:id="@+id/depart"
+            android:id="@+id/place"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Nombre de places disponibles"
@@ -90,23 +91,10 @@
             />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
-        <EditText
-            android:id="@+id/depart"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Prix"
-            android:textColorHint="@color/black"
-            android:paddingLeft="10dp"
-            android:inputType="textPersonName"
-            android:background="@color/white"
-            />
-    </RelativeLayout>
+
 
     <Button
+        android:id="@+id/valider"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="25dp"

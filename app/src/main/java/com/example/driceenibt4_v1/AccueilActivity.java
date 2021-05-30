@@ -42,4 +42,24 @@ public class AccueilActivity extends AppCompatActivity {
             }
         });
 
+        creer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent otherActivity = new Intent(getApplicationContext(), CreerActivity.class);
+                startActivity(otherActivity);
+                finish();
+
+            }
+        });
+
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent otherActivity = new Intent(getApplicationContext(), ProfilActivity.class);
+                startActivity(otherActivity);
+                finish();
+
+            }
+        });
+
 }
