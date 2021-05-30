@@ -59,7 +59,6 @@
         android:layout_marginTop="40dp">
 
         <EditText
-            android:id="@+id/destination"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
@@ -76,10 +75,4 @@
         android:text="Valider"
         android:textAllCaps="false"
         android:textSize="20dp" />
-
-
-
-
-
-
-
+</LinearLayout>
