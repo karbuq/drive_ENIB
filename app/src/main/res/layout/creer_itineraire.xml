@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:background="#1E88E5"
+    >
+
+
+    <TextView
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Quel trajet effectuez vous ?"
+        android:textColor="@color/purple_500"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:id="@+id/depart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Départ"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Destination"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:hint="Date"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:hint="Heure"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:id="@+id/depart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Nombre de places disponibles"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:id="@+id/depart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Prix"
+            android:textColorHint="@color/black"
+            android:paddingLeft="10dp"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:text="Valider"
+        android:textAllCaps="false"
+        android:textSize="20dp" />
+
+
+
+
+
+
+
