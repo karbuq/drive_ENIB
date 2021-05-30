@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textColor="@color/white"
-        android:text="Créer un compte"
+        android:text="Modifier mes informations"
         android:textStyle="bold"
         android:layout_gravity="center"
         ></TextView>
@@ -127,12 +127,12 @@
         android:id="@+id/creation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Créer mon compte"
         android:layout_marginTop="10dp"
-        android:textSize="20dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
-        android:textAllCaps="false"></Button>
+        android:text="Confirmer"
+        android:textAllCaps="false"
+        android:textSize="20dp"></Button>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vous avez déjà un compte?"
+            android:text="Déconnexion"
             android:textColor="@color/white"
             android:textSize="18dp"></TextView>
 
@@ -156,7 +156,7 @@
             android:id="@+id/reto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Connectez vous"
+            android:text="Retour"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="17sp"

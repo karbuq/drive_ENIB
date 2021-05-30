@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,8 +17,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -47,6 +44,7 @@ public class MainActivity extends AppCompatActivity{
         firebaseAuth=FirebaseAuth.getInstance();
 
         //action des button et liens
+        //passage a l'activité création de compte
         creationCompteTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity{
         forgetmdpTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//test dataBase
 
                 Toast.makeText(MainActivity.this,"va voir tes mail si on la coder...",Toast.LENGTH_SHORT).show();
             }
@@ -109,7 +106,7 @@ public class MainActivity extends AppCompatActivity{
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this,"Succés",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(MainActivity.this,UserActivity.class);
+                    Intent intent=new Intent(MainActivity.this, MenuActivty.class);
                     startActivity(intent);
                     finish();
                 }

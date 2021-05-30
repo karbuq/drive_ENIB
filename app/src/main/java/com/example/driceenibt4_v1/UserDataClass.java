@@ -8,20 +8,11 @@ public class UserDataClass {
 
     }
 
-    public UserDataClass(String prenom, String nom, String numTel, String age,String email) {
+    public UserDataClass(String prenom, String numTel, String age, String email) {
         this.prenom = prenom;
-        this.nom = nom;
         this.numTel = numTel;
         this.age = age;
         this.email=email;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPrenom() {
@@ -55,4 +46,17 @@ public class UserDataClass {
     public void setAge(String age) {
         this.age = age;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
+
+
 }
