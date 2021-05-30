@@ -20,14 +20,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText emailEt,passworlEt1,passworldEt2;
-    private Button creationCompte;
+    private EditText emailEt,pseudoET,telephoneET,ageET,mdp1ET,mdp2ET;
+    private Button creationCompteBT;
     private TextView connextionReturn;
-    private ProgressBar mProgressBar;
+  //  private ProgressBar mProgressBar;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog mProgressDialog;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +40,25 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.signup_activity);
         //déclaration des variable
         firebaseAuth = FirebaseAuth.getInstance();
+
         emailEt = findViewById(R.id.email);
-        passworlEt1 = findViewById(R.id.passeworl);
-        passworldEt2 = findViewById(R.id.confpassworld);
-        creationCompte = findViewById(R.id.Connexion);
-        connextionReturn = findViewById(R.id.retourconnextion);
+        pseudoET=findViewById(R.id.pseudo);
+        telephoneET=findViewById(R.id.telephone);
+        ageET=findViewById(R.id.age);
+        mdp1ET=findViewById(R.id.mdp1);
+        mdp2ET=findViewById(R.id.mdp2);
+
+        creationCompteBT=findViewById(R.id.creation);
+
+        connextionReturn = findViewById(R.id.reto);
         mProgressDialog =new  ProgressDialog(this);
+
         //button
-        creationCompte.setOnClickListener(new View.OnClickListener() {
+        creationCompteBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Register();
+
             }
         });
 
@@ -61,27 +74,45 @@ public class SignUpActivity extends AppCompatActivity {
     //fonction qui va enregistrer le profil
     private void Register(){
         String email=emailEt.getText().toString();
-        String passworld1=passworlEt1.getText().toString();
-        String passworld2=passworldEt2.getText().toString();
+        String prenom=pseudoET.getText().toString();
+        String numtel=telephoneET.getText().toString();
+        String age=ageET.getText().toString();
+        String passworld1=mdp1ET.getText().toString();
+        String passworld2=mdp2ET.getText().toString();
+
+
         //verification que la création du profile correspond a ce que l'on demade
         if(TextUtils.isEmpty(email)){
             emailEt.setError("Enter your email");
             return;
         }
+        else if(TextUtils.isEmpty(prenom)){
+            pseudoET.setError("Entrer votre mot de passe");
+            return;
+        }
+        else if(TextUtils.isEmpty(numtel)){
+            telephoneET.setError("Entrer votre mot de passe");
+            return;
+        }
+        else if(TextUtils.isEmpty(age)){
+            ageET.setError("Entrer votre mot de passe");
+            return;
+        }
+
         else if(TextUtils.isEmpty(passworld1)){
-            passworlEt1.setError("Entrer votre mot de passe");
+            mdp1ET.setError("Entrer votre mot de passe");
             return;
         }
         else if(TextUtils.isEmpty(passworld2)){
-            passworldEt2.setError("Confimer votre mot de passe");
+            mdp2ET.setError("Confimer votre mot de passe");
             return;
         }
         else if(!passworld1.equals(passworld2)){
-            passworldEt2.setError("Mot de passe différent");
+            mdp2ET.setError("Mot de passe différent");
             return;
         }
         else if(passworld1.length()<5){
-            passworlEt1.setError("Mot de passe trop court");
+            mdp1ET.setError("Mot de passe trop court");
             return;
         }
         else if(!isVallidEmail(email)){
@@ -91,12 +122,24 @@ public class SignUpActivity extends AppCompatActivity {
         mProgressDialog.setMessage("patientez svp");
         mProgressDialog.show();
         mProgressDialog.setCanceledOnTouchOutside(false);
+        //creation du compte
         firebaseAuth.createUserWithEmailAndPassword(email,passworld1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull  Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    //creation de la base de donné
+                    UserDataClass dataClass=new UserDataClass(prenom,numtel,age,email);
+
+                    FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+                    DatabaseReference mDbRef = mDatabase.getReference("Utilisateur");
+                    mDbRef.child(prenom).setValue(dataClass);
+
+
+                    //reference=rootNode.getReference("Utilisateur");
+                    //reference.child(prenom).setValue(dataClass);
+                    //passage à l'autre activité
                     Toast.makeText(SignUpActivity.this,"Succés",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(SignUpActivity.this,UserActivity.class);
+                    Intent intent=new Intent(SignUpActivity.this,MenuActivty.class);
                     startActivity(intent);
                     finish();
                 }
