@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,8 @@ public class ProfilActivity extends AppCompatActivity {
     private static final String TAG = "ProfilActivity";
 
     private TextView retourTv;
+    private EditText email,nom,telephone,age,mdp;
+    private Button confirmatinBt;
 
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -37,8 +40,29 @@ public class ProfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profil);
 
         retourTv=findViewById(R.id.reto);
+        confirmatinBt=findViewById(R.id.confirmbt);
+
+        //hooks
+        email=findViewById(R.id.email);
+        nom=findViewById(R.id.pseudo);
+        telephone=findViewById(R.id.telephone);
+        age=findViewById(R.id.age);
+        mdp=findViewById(R.id.mdp1);
+
+        //Showdata
+        showAllUserData();
 
         retourTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfilActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        confirmatinBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfilActivity.this, MenuActivty.class);
@@ -46,9 +70,25 @@ public class ProfilActivity extends AppCompatActivity {
                 finish();
 
             }
+
+
     });
 
 
+
+    }
+
+    private void showAllUserData() {
+        Intent intent=getIntent();
+        String user_prenom=intent.getStringExtra("prenom");
+        String user_email=intent.getStringExtra("email");
+        String user_numtel=intent.getStringExtra("numTel");
+        String user_age=intent.getStringExtra("age");
+
+        email.setHint(user_email);
+        nom.setHint(user_prenom);
+        telephone.setHint(user_numtel);
+        age.setHint(user_age);
 
     }
 

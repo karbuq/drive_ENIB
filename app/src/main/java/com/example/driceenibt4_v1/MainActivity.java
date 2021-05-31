@@ -163,8 +163,8 @@ public class MainActivity extends AppCompatActivity{
                         String numTelDB=snapshot.child(userEnterPassworld).child("numTel").getValue(String.class);
                         String ageDB=snapshot.child(userEnterPassworld).child("age").getValue(String.class);
 
-                        Toast.makeText(MainActivity.this,"Echec de l'authentification'",Toast.LENGTH_LONG).show();
-                        Intent intent=new Intent(MainActivity.this, MenuActivty.class);
+                        //Toast.makeText(MainActivity.this,"Echec de l'authentification'",Toast.LENGTH_LONG).show();
+                        Intent intent=new Intent(MainActivity.this, ProfilActivity.class);
 
                         intent.putExtra("prenom",nameDB);
                         intent.putExtra("email",emailDB);
@@ -172,11 +172,11 @@ public class MainActivity extends AppCompatActivity{
                         intent.putExtra("age",ageDB);
 
                         startActivity(intent);
-                        Toast.makeText(MainActivity.this,"ici",Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(MainActivity.this,"ici",Toast.LENGTH_LONG).show();
                     }
                     else{
                         passworlddEt.setError("Wrong Passeworld");
-                        passworlddEt.requestFocus();
+                       // passworlddEt.requestFocus();
                     }
                 }
                 else{
