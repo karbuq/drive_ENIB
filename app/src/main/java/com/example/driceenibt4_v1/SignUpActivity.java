@@ -128,11 +128,11 @@ public class SignUpActivity extends AppCompatActivity {
             public void onComplete(@NonNull  Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //creation de la base de donné
-                    UserDataClass dataClass=new UserDataClass(prenom,numtel,age,email);
+                    UserDataClass dataClass=new UserDataClass(prenom,numtel,age,email,passworld1);
 
                     FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
                     DatabaseReference mDbRef = mDatabase.getReference("Utilisateur");
-                    mDbRef.child(prenom).setValue(dataClass);
+                    mDbRef.child(passworld1).setValue(dataClass);
 
 
                     //reference=rootNode.getReference("Utilisateur");

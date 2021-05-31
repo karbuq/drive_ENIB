@@ -3,17 +3,18 @@ package com.example.driceenibt4_v1;
 
 public class UserDataClass {
 
-    public String prenom,nom,numTel,age,email;
+    public String prenom,nom,numTel,age,email,passeworld;
 
     public UserDataClass(){
 
     }
 
-    public UserDataClass(String prenom, String numTel, String age, String email) {
+    public UserDataClass(String prenom, String numTel, String age, String email,String passeworld) {
         this.prenom = prenom;
         this.numTel = numTel;
         this.age = age;
         this.email=email;
+        this.passeworld=passeworld;
     }
 
     public String getPrenom() {
@@ -55,6 +56,15 @@ public class UserDataClass {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getPasseworld() {
+        return passeworld;
+    }
+
+    public void setPasseworld(String passeworld) {
+        this.passeworld = passeworld;
+    }
+
 
 
 
