@@ -139,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity {
                     //reference.child(prenom).setValue(dataClass);
                     //passage à l'autre activité
                     Toast.makeText(SignUpActivity.this,"Succés",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(SignUpActivity.this,ProfilActivity.class);
+                    Intent intent=new Intent(SignUpActivity.this,AccueilActivity.class);
                     startActivity(intent);
                     finish();
                 }

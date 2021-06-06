@@ -65,7 +65,7 @@ public class ProfilActivity extends AppCompatActivity {
         confirmatinBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProfilActivity.this, MenuActivty.class);
+                Intent intent = new Intent(ProfilActivity.this, AccueilActivity.class);
                 startActivity(intent);
                 finish();
 

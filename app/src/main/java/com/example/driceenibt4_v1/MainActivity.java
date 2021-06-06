@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity{
 
                     Toast.makeText(MainActivity.this,"Succés",Toast.LENGTH_LONG).show();
 
-                    Intent intent=new Intent(MainActivity.this, MenuActivty.class);
+                    Intent intent=new Intent(MainActivity.this, AccueilActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity{
                         String ageDB=snapshot.child(userEnterPassworld).child("age").getValue(String.class);
 
                         //Toast.makeText(MainActivity.this,"Echec de l'authentification'",Toast.LENGTH_LONG).show();
-                        Intent intent=new Intent(MainActivity.this, ProfilActivity.class);
+                        Intent intent=new Intent(MainActivity.this, AccueilActivity.class);
 
                         intent.putExtra("prenom",nameDB);
                         intent.putExtra("email",emailDB);
